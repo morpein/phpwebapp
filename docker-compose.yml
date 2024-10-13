@@ -1,0 +1,11 @@
+services:
+     wwwserver:
+          build: .
+          image: asn/phpwebapp:v1
+          environment:
+               PORT: 80
+          ports:
+               - "8080:80"
+          volumes:
+               - ./html:/var/www/html
+          
